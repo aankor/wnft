@@ -14,6 +14,7 @@ import {useQueryClient} from '@tanstack/react-query';
 import usePathAuthority from '../hooks/usePathAuthority';
 import {loadWalletCnfts} from '../hooks/cnft/useWalletCnfts';
 import useWnftCollectionRoot from '../hooks/useWnftCollectionRoot';
+import { loadWalletTokens } from '../hooks/token/useWalletTokens';
 
 const UserContents: FC = () => {
   const {publicKey} = useWallet();
@@ -31,7 +32,7 @@ const UserContents: FC = () => {
       });
       queryClient.prefetchQuery(['wallet', authority.toBase58(), 'tokens'], {
         queryFn: () =>
-          loadWalletCnfts({wallet: authority, rootData: root.data}),
+          loadWalletTokens({wallet: authority}),
       });
     }
   }, [authority, queryClient, root.data]);
