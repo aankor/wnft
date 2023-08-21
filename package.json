@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "anchor-build": "anchor build --arch sbf",
+    "copy-generated": "copyfiles target/types/wnft_collection.ts packages/wnftc-sdk/generated && copyfiles target/types/wnft.ts packages/wnft-sdk/generated",
+    "build": "pnpm anchor-build && pnpm copy-generated"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}

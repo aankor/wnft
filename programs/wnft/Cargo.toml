@@ -1,0 +1,22 @@
+[package]
+name = "wnft"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "wnft"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.28.0"
+anchor-spl = "0.28.0"
+mpl-bubblegum = { version = "0.10.1", features = ["cpi"] }
+spl-account-compression = { version = "0.2.0", features = ["cpi"] }
