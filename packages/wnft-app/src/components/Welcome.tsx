@@ -1,12 +1,21 @@
-import {Typography} from '@mui/joy';
+import {Link, Typography} from '@mui/joy';
 import {Paper} from '@mui/material';
 import {FC} from 'react';
 
 const Welcome: FC = () => {
   return (
     <Paper sx={{paddingTop: '1em', paddingBottom: '1em'}}>
-      <Typography level="h2" sx={{textAlign: 'center', marginBottom: '2em'}}>
-        Wallet NFT
+      <Typography level="h2" sx={{textAlign: 'center', marginBottom: '1em'}}>
+        The Wallet NFT protocol
+      </Typography>
+      <Typography level="h4" sx={{textAlign: 'center', marginBottom: '1.5em'}}>
+        <Link
+          href="https://youtu.be/vwW975wrTzc"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Demo video
+        </Link>
       </Typography>
       <Typography sx={{textIndent: '1.5em', marginBottom: '2em'}}>
         In the vast digital landscape, blockchain assets of all kinds – from
